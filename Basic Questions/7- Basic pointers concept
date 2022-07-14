@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main(){
+   /int num=5;
+    cout<<num<<endl;
+    
+    /// & operator is used for address of a block or variable(called mpercent)
+    ///which is in hexadecimal format (012---9deg)
+    cout<<&num<<endl;
+    int *ptr=&num;
+    cout<<"address of ptr "<<ptr<<endl;
+    cout<<"value at ptr is defined by  "<<*ptr<<endl;
+    
+    /// NULL POINTER CAN BE MADE BY THIS/   /////
+    int *ptr2=0;
+    cout<<*ptr2;
+    
+    //////------BAD PRACTISE----/////
+    int *q;
+    cout<<*q<<endl;
+    
+//////-----pointer to a pointer-----////
+int *p=ptr;
+cout<<*p;
+/////-----ARRAY IN POINTER----////
+
+int arr[5]={12,15,34,54,86};
+int *pra=arr;
+for(int i=0;i<5;i++){
+    cout<<*pra<<endl;
+    pra++;
+}
+    
+    //important concept  pointers arithemetic---///
+   int i = 3;
+   int *t = &i;
+   //cout <<  (*t)++ << endl;
+   *t = *t +1;
+    cout << *t << endl;
+    cout << " before t " << t << endl;
+    t = t + 1;
+    cout << " after t " << t << endl;
+
+
+
+    return 0;
+}
