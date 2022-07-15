@@ -1,0 +1,56 @@
+/////---- recursion is when function call itself by himself is called recursion---
+//  HINDI bhasha mai choti problem badi problem ko call krti hai------
+
+
+
+#include <iostream>
+
+using namespace std;
+          /*----RECURENCE FUNCTION OF FACTORIAL----*/
+
+int factorial(int n){
+    ////  BASE FUNCTION LIKHNA JARURI HAI  ///
+    if(n==0){
+        return 1;
+    }
+    //// recursive relation   ///
+    int smallerproblem=factorial(n-1);
+    int biggerproblem=n*smallerproblem;
+    return biggerproblem;
+}
+int power(int n) {
+
+    //base case 
+    if(n == 0){
+        return 1;
+}
+    //recursive relation
+   /* int smallpow=power(n-1);
+    int bigpow=2*smallpow;
+    return bigpow; */
+    return 2*power(n-1);
+}
+void count(int n){
+    if(n==0){
+        return;
+    }
+    
+    cout<<n<<endl;
+    count(n-1);
+}
+
+
+int main()
+{
+   //  int n;
+//    cin>>n;
+   // int ans =factorial(n);
+   // cout<<ans<<endl;
+    int m;
+    cin>>m;
+    int ans2=power(m);
+    cout<<ans2<<endl;
+   count(m);
+   
+    return 0;
+}
