@@ -1,0 +1,22 @@
+#include<iostream> 
+using namespace std;
+bool linear(int arr[],int size,int key){
+    /// BASE CONDITION
+    if(size==0)
+    return false;
+    if(arr[0]==key){
+        return true;
+    }
+   return linear(arr+1,size-1,key);
+}
+
+int main() {
+
+  int arr[6]={2,4,5,9,11,18};
+ int ans= linear(arr,6,9);
+ if(ans){
+     cout<<"present";
+ }else{
+     cout<<"not present";
+ }
+ }
